@@ -1,10 +1,59 @@
 body{
-    padding: 2rem;
     background-color: #C8D0D2;
+    margin:0;
+}
+
+.container{
+    margin: 2rem 2rem 2rem;
+}
+
+.header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #fff ;
+    padding: .7rem;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+}
+
+.form-group{
+    display: flex;
+    margin: .5rem;
+    flex-direction: column;
+}
+
+.form-group > label{
+    color: #777;
+    font-size: .75rem;
+    font-weight: bold;
+    margin-bottom: .25rem;
+}
+
+.btn{
+    background-color: hsl(200, 100%, 50%);
+    color: #fff;
+    padding: .4em 1em;
+    border-radius: .3em;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btn:hover{
+    background-color: hsl(200, 100%, 40%);;
+}
+
+
+.card-grid{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) ;
+    gap: 1rem;
 }
 
 .card{
-    margin: 2rem;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,8 +62,6 @@ body{
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
     background-color: white;
     transform-style: preserve-3d;
-    height: 210px;
-    width: 210px;
     transition: 250ms;
     cursor: pointer;
     transform: perspective(1000px) rotateY(var(--rotate-y, 0))
@@ -44,6 +91,7 @@ body{
 }
 
 .card .back{
+    background-color: #9ff394;
     transform: rotateY(180deg);
 }
 
